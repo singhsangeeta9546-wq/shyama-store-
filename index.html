@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shyama Store | Premium Shopping</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #00d2ff;
+            --bg: #080808;
+            --card: #151515;
+            --text: #ffffff;
+            --muted: #888888;
+        }
+
+        .light-mode {
+            --bg: #f5f5f7;
+            --card: #ffffff;
+            --text: #1d1d1f;
+            --muted: #666;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; transition: 0.3s; }
+        body { background: var(--bg); color: var(--text); }
+
+        /* --- Global Helpers --- */
+        .container { max-width: 1200px; margin: auto; padding: 0 20px; }
+        section { padding: 80px 0; }
+
+        /* --- Navbar (Previous Version) --- */
+        nav {
+            padding: 15px 5%; display: flex; justify-content: space-between; align-items: center;
+            background: var(--bg); position: sticky; top: 0; z-index: 1000;
+            border-bottom: 1px solid #33333333; backdrop-filter: blur(10px);
+        }
+
+        /* --- Contact Section --- */
+        .contact-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;
+        }
+
+        form { background: var(--card); padding: 30px; border-radius: 20px; border: 1px solid #33333333; }
+        input, textarea {
+            width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px;
+            border: 1px solid #33333333; background: transparent; color: var(--text);
+        }
+
+        .btn-submit {
+            background: var(--primary); color: white; border: none; padding: 12px 30px;
+            border-radius: 8px; cursor: pointer; font-weight: 600; width: 100%;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--card); padding: 60px 0 20px; border-top: 1px solid #33333333;
+            margin-top: 50px;
+        }
+
+        .footer-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 { margin-bottom: 20px; color: var(--primary); }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 10px; cursor: pointer; color: var(--muted); }
+        .footer-col ul li:hover { color: var(--primary); }
+
+        .social-icons { display: flex; gap: 15px; margin-top: 15px; }
+        .icon { width: 35px; height: 35px; background: #333; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+
+        .copyright { text-align: center; border-top: 1px solid #33333333; padding-top: 20px; color: var(--muted); font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h2 style="color:var(--primary)">SHYAMA</h2>
+        <button onclick="document.body.classList.toggle('light-mode')" style="background:none; border:none; cursor:pointer; color:var(--text); font-size:20px;">🌓</button>
+    </nav>
+
+    <div class="container" style="margin-top: 50px;">
+        <h2 data-aos="fade-right">Featured Products</h2>
+        <br>
+        <p>Aapke purane products yahan aayenge...</p>
+    </div>
+
+    <section id="contact">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;" data-aos="fade-up">Contact Us</h2>
+            <div class="contact-grid">
+                <div data-aos="fade-right">
+                    <h3>Get in touch</h3>
+                    <p style="color: var(--muted); margin: 20px 0;">Humein message bhejein, hum 24 ghante mein jawab denge.</p>
+                    <p>📍 123 Street, Digital City, India</p>
+                    <p>📧 support@shyamastore.com</p>
+                    <p>📞 +91 98765 43210</p>
+                </div>
+                <form data-aos="fade-left">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <textarea rows="4" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>SHYAMA STORE</h4>
+                    <p style="color: var(--muted);">Premium quality products for a premium lifestyle. Shopping made easy.</p>
+                    <div class="social-icons">
+                        <div class="icon">f</div>
+                        <div class="icon">ig</div>
+                        <div class="icon">tw</div>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li>Home</li>
+                        <li>Products</li>
+                        <li>About Us</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Help & Support</h4>
+                    <ul>
+                        <li>Track Order</li>
+                        <li>Returns</li>
+                        <li>FAQs</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Shyama Store. All rights reserved. Made with ❤️
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800 });</script>
+</body>
+  </html>
